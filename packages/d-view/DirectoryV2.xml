@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <trees>
+     <tree path="/vite.config.ts" title="Vite 配置" extension="ts"/>
+     <tree path="/tsconfig.json" title="TS 配置" extension="json"/>
+     <tree path="/index.ts" title="入口文件" extension="ts"/>
+     <tree path="/DirectoryV2.xml" title="WebStorm文件/目录备注配置" extension="xml"/>
+     <tree path="/utils/global-config.ts" title="全局配置" extension="ts"/>
+     <tree path="/utils/types.ts" title="全局类型" extension="ts"/>
+     <tree path="/utils" title="全局文件"/>
+     <tree path="/style" title="Less 样式"/>
+     <tree path="/style/color" title="颜色样式"/>
+     <tree path="/style/theme/components" title="组件主题样式"/>
+     <tree path="/style/common.less" title="常用样式" extension="less"/>
+    <tree path="/style/normalize.less" title="reset 样式" extension="less"/>
+    <tree path="/style/index.less" title="Less 样式入口文件" extension="less"/>
+    <tree path="/style/common-var.less" title="常用变量" extension="less"/>
+    <tree path="/style/theme" title="主题配置"/>
+    <tree path="/style/color/colors.less" title="Less 使用的颜色变量 ( 引用原生CSS变量 )" extension="less"/>
+    <tree path="/style/color/css-var.less" title="原生 CSS 颜色变量" extension="less"/>
+    <tree path="/style/theme/index.less" title="主题入口样式文件" extension="less"/>
+    <tree path="/style/theme/common-var.less" title="主题常用变量" extension="less"/>
+    <tree path="/style/theme/components/index.less" title="组件主题样式入口文件" extension="less"/>
+    <tree path="/style/theme/custom-var.less" title="可自定义的变量" extension="less"/>
+    <tree path="/style/theme/components/button" title="按钮组件样式"/>
+    <tree path="/style/theme/components/button/index.less" title="组件样式入口文件" extension="less"/>
+    <tree path="/.prettierrc.js" title="Prettier配置" extension="js"/>
+    <tree path="/.stylelintrc.js" title="Stylelint配置" extension="json"/>
+</trees>

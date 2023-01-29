@@ -1,0 +1,25 @@
+{
+  "name": "d-view-monorepo",
+  "version": "1.0.0",
+  "description": "DView Monorepo",
+  "private": true,
+  "scripts": {
+    "preinstall": "node ./scripts/preinstall.js",
+    "prepare": "husky install",
+    "commit": "git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "keywords": [],
+  "author": "Bytedance Youthcamp Debug",
+  "license": "LGPL",
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.0"
+  }
+}

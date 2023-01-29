@@ -1,0 +1,61 @@
+{
+  "name": "d-view",
+  "version": "1.0.0",
+  "description": "DView",
+  "scripts": {
+    "precommit": "lint-staged",
+    "build": "vite build",
+    "lint": "pnpm tsc && pnpm lint:eslint&& pnpm lint:style && pnpm lint:md ",
+    "lint:eslint": "eslint . --ext .js,.jsx,.ts,.tsx,.vue",
+    "lint:md": "remark . -f -q",
+    "lint:style": "stylelint {**/*,*}.{less,css} --custom-syntax postcss-less",
+    "tsc": "tsc --noEmit",
+    "prettier": "prettier -c --write **/*"
+  },
+  "remarkConfig": {
+    "plugins": [
+      "remark-lint",
+      "remark-preset-lint-recommended"
+    ]
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx,vue,less,css,md}": "prettier -c --write",
+    "*.{js,ts,jsx,tsx,vue}": "eslint",
+    "*.{less,css}": "stylelint --custom-syntax postcss-less"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.49.0",
+    "@typescript-eslint/parser": "^5.49.0",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vitejs/plugin-vue-jsx": "^3.0.0",
+    "eslint": "^8.32.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-import-resolver-typescript": "^3.5.3",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.9.0",
+    "lint-staged": "^13.1.0",
+    "postcss": "^8.4.21",
+    "postcss-html": "^1.5.0",
+    "postcss-less": "^6.0.0",
+    "prettier": "^2.8.3",
+    "remark": "^14.0.2",
+    "remark-cli": "^11.0.0",
+    "remark-lint": "^9.1.1",
+    "remark-preset-lint-recommended": "^6.1.2",
+    "stylelint": "^14.16.1",
+    "stylelint-config-prettier": "^9.0.4",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^29.0.0",
+    "stylelint-order": "^6.0.1",
+    "typescript": "^4.9.4",
+    "vite": "^4.0.4"
+  },
+  "dependencies": {
+    "vue": "^3.2.45"
+  },
+  "keywords": [],
+  "author": "Bytedance Youthcamp Debug",
+  "license": "LGPL"
+}

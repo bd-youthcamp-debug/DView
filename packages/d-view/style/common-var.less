@@ -1,0 +1,165 @@
+@import 'theme/custom-var.less';
+
+// 原生 CSS 变量挂载标签
+@css-var-mount-tag: body;
+
+// class name 前缀
+@class-prefix: if(@custom-prefix = ~'', dview, @custom-prefix);
+
+// 使用方式: @{@css-var-prefix}-red-1  使用效果: --red-1 或 --dv-red1
+// 原生 css 变量前缀, 若要改变前缀请勿修改此项, 请修改 custom-css-var-prefix
+@css-var-prefix: if(@custom-css-var-prefix = ~'', ~'-', ~'--@{@custom-css-var-prefix}');
+
+// 字体
+@font-family: var(~'@{css-var-prefix}-font-family');
+// 全局默认字号
+@font-size-body: var(~'@{css-var-prefix}-font-size-body');
+// 代码字体
+@code-family: var(~'@{css-var-prefix}-code-family');
+// 行高基准
+@line-height-base: var(~'@{css-var-prefix}-line-height-base');
+
+/****** z-index ******/
+// 弹出类 z-index 基准
+@popup-z-index-base: var(~'@{css-var-prefix}-popup-z-index-base');
+// 弹出窗
+@popup-z-index: @popup-z-index-base;
+// 侧边栏导航
+@drawer-z-index: ~'@{popup-z-index-base} + 1';
+// 模态框
+@modal-z-index: @popup-z-index-base;
+// 图片预览
+@image-preview-z-index: @popup-z-index-base;
+
+/****** 边框大小 ******/
+@border-none: var(~'@{css-var-prefix}-border-size-none');
+@border-1: var(~'@{css-var-prefix}-border-size-1');
+@border-2: var(~'@{css-var-prefix}-border-size-2');
+@border-3: var(~'@{css-var-prefix}-border-size-3');
+@border-4: var(~'@{css-var-prefix}-border-size-4');
+@border-5: var(~'@{css-var-prefix}-border-size-5');
+
+/****** 圆角大小 ******/
+@border-radius-none: var(~'@{css-var-prefix}-border-radius-none');
+@border-radius-small: var(~'@{css-var-prefix}-border-radius-small');
+@border-radius-medium: var(~'@{css-var-prefix}-border-radius-medium');
+@border-radius-large: var(~'@{css-var-prefix}-border-radius-large');
+@border-radius-huge: var(~'@{css-var-prefix}-border-radius-huge');
+@border-radius-circle: var(~'@{css-var-prefix}-border-radius-circle');
+
+/****** 阴影 ******/
+@shadow-none: var(~'@{css-var-prefix}-shadow-none');
+@shadow-color: var(~'@{css-var-prefix}-shadow-color');
+// 特殊阴影 可以用作极细边框
+@shadow-special: 0 0 1px #0000004c;
+@shadow-1-size-color: var(~'@{css-var-prefix}-shadow-size-1') @shadow-color;
+// x y 阴影半径 阴影颜色
+@shadow-1-center: 0 0 @shadow-1-size-color;
+@shadow-1-position-top: var(~'@{css-var-prefix}-shadow-size-1-position-top') @shadow-1-size-color;
+@shadow-1-position-bottom: var(~'@{css-var-prefix}-shadow-size-1-position-bottom')
+  @shadow-1-size-color;
+@shadow-1-position-left: var(~'@{css-var-prefix}-shadow-size-1-position-left') @shadow-1-size-color;
+@shadow-1-position-right: var(~'@{css-var-prefix}-shadow-size-1-position-right')
+  @shadow-1-size-color;
+@shadow-1-position-top-left: var(~'@{css-var-prefix}-shadow-size-1-position-top-left')
+  @shadow-1-size-color;
+@shadow-1-position-top-right: var(~'@{css-var-prefix}-shadow-size-1-position-top-right')
+  @shadow-1-size-color;
+@shadow-1-position-bottom-left: var(~'@{css-var-prefix}-shadow-size-1-position-bottom-left')
+  @shadow-1-size-color;
+@shadow-1-position-bottom-right: var(~'@{css-var-prefix}-shadow-size-1-position-bottom-right')
+  @shadow-1-size-color;
+
+@shadow-2-size-color: var(~'@{css-var-prefix}-shadow-size-2') @shadow-color;
+@shadow-2-center: 0 0 @shadow-2-size-color;
+@shadow-2-position-top: var(~'@{css-var-prefix}-shadow-size-2-position-top') @shadow-2-size-color;
+@shadow-2-position-bottom: var(~'@{css-var-prefix}-shadow-size-2-position-bottom')
+  @shadow-2-size-color;
+@shadow-2-position-left: var(~'@{css-var-prefix}-shadow-size-2-position-left') @shadow-2-size-color;
+@shadow-2-position-right: var(~'@{css-var-prefix}-shadow-size-2-position-right')
+  @shadow-2-size-color;
+@shadow-2-position-top-left: var(~'@{css-var-prefix}-shadow-size-2-position-top-left')
+  @shadow-2-size-color;
+@shadow-2-position-top-right: var(~'@{css-var-prefix}-shadow-size-2-position-top-right')
+  @shadow-2-size-color;
+@shadow-2-position-bottom-left: var(~'@{css-var-prefix}-shadow-size-2-position-bottom-left')
+  @shadow-2-size-color;
+@shadow-2-position-bottom-right: var(~'@{css-var-prefix}-shadow-size-2-position-bottom-right')
+  @shadow-2-size-color;
+
+@shadow-3-size-color: var(~'@{css-var-prefix}-shadow-size-3') @shadow-color;
+@shadow-3-center: 0 0 @shadow-3-size-color;
+@shadow-3-position-top: var(~'@{css-var-prefix}-shadow-size-3-position-top') @shadow-3-size-color;
+@shadow-3-position-bottom: var(~'@{css-var-prefix}-shadow-size-3-position-bottom')
+  @shadow-3-size-color;
+@shadow-3-position-left: var(~'@{css-var-prefix}-shadow-size-3-position-left') @shadow-3-size-color;
+@shadow-3-position-right: var(~'@{css-var-prefix}-shadow-size-3-position-right')
+  @shadow-3-size-color;
+@shadow-3-position-top-left: var(~'@{css-var-prefix}-shadow-size-3-position-top-left')
+  @shadow-3-size-color;
+@shadow-3-position-top-right: var(~'@{css-var-prefix}-shadow-size-3-position-top-right')
+  @shadow-3-size-color;
+@shadow-3-position-bottom-left: var(~'@{css-var-prefix}-shadow-size-3-position-bottom-left')
+  @shadow-3-size-color;
+@shadow-3-position-bottom-right: var(~'@{css-var-prefix}-shadow-size-3-position-bottom-right')
+  @shadow-3-size-color;
+
+@shadow-4-size-color: var(~'@{css-var-prefix}-shadow-size-4') @shadow-color;
+@shadow-4-center: 0 0 @shadow-4-size-color;
+@shadow-4-position-top: var(~'@{css-var-prefix}-shadow-size-4-position-top') @shadow-4-size-color;
+@shadow-4-position-bottom: var(~'@{css-var-prefix}-shadow-size-4-position-bottom')
+  @shadow-4-size-color;
+@shadow-4-position-left: var(~'@{css-var-prefix}-shadow-size-4-position-left') @shadow-4-size-color;
+@shadow-4-position-right: var(~'@{css-var-prefix}-shadow-size-4-position-right')
+  @shadow-4-size-color;
+@shadow-4-position-top-left: var(~'@{css-var-prefix}-shadow-size-4-position-top-left')
+  @shadow-4-size-color;
+@shadow-4-position-top-right: var(~'@{css-var-prefix}-shadow-size-4-position-top-right')
+  @shadow-4-size-color;
+@shadow-4-position-bottom-left: var(~'@{css-var-prefix}-shadow-size-4-position-bottom-left')
+  @shadow-4-size-color;
+@shadow-4-position-bottom-right: var(~'@{css-var-prefix}-shadow-size-4-position-bottom-right')
+  @shadow-4-size-color;
+
+/****** 阴影 ******/
+
+/****** size ******/
+@size-none: var(~'@{css-var-prefix}-size-none');
+@size-1: var(~'@{css-var-prefix}-size-1');
+@size-2: var(~'@{css-var-prefix}-size-2');
+@size-3: var(~'@{css-var-prefix}-size-3');
+@size-4: var(~'@{css-var-prefix}-size-4');
+@size-5: var(~'@{css-var-prefix}-size-5');
+@size-6: var(~'@{css-var-prefix}-size-6');
+@size-7: var(~'@{css-var-prefix}-size-7');
+@size-8: var(~'@{css-var-prefix}-size-8');
+@size-9: var(~'@{css-var-prefix}-size-9');
+@size-10: var(~'@{css-var-prefix}-size-10');
+@size-11: var(~'@{css-var-prefix}-size-11');
+@size-12: var(~'@{css-var-prefix}-size-12');
+
+@size-mini: @size-6;
+@size-small: @size-8;
+@size-default: @size-9;
+@size-large: @size-10;
+
+/****** 间距 ******/
+@space-none: var(~'@{css-var-prefix}-space-none');
+
+/****** 字号 ******/
+@font-size-caption: var(~'@{css-var-prefix}-font-size-caption');
+@font-size-text-small: var(~'@{css-var-prefix}-font-size-text-small');
+@font-size-text-default: var(~'@{css-var-prefix}-font-size-text-default');
+@font-size-text-large: var(~'@{css-var-prefix}-font-size-text-large');
+@font-size-title-small: var(~'@{css-var-prefix}-font-size-title-small');
+@font-size-title-default: var(~'@{css-var-prefix}-font-size-title-default');
+@font-size-title-large: var(~'@{css-var-prefix}-font-size-title-large');
+@font-size-title-larger: var(~'@{css-var-prefix}-font-size-title-larger');
+@font-size-title-x-large: var(~'@{css-var-prefix}-font-size-title-x-large');
+@font-size-title-xx-large: var(~'@{css-var-prefix}-font-size-title-xx-large');
+
+/****** 字重 ******/
+@font-weight-light: var(~'@{css-var-prefix}-font-weight-light');
+@font-weight-default: var(~'@{css-var-prefix}-font-weight-default');
+@font-weight-title: var(~'@{css-var-prefix}-font-weight-title');
+@font-weight-english-number: var(~'@{css-var-prefix}-font-weight-english-number');
