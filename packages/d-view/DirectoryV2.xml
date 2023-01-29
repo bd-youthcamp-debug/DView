@@ -23,6 +23,9 @@
     <tree path="/style/theme/custom-var.less" title="可自定义的变量" extension="less"/>
     <tree path="/style/theme/components/button" title="按钮组件样式"/>
     <tree path="/style/theme/components/button/index.less" title="组件样式入口文件" extension="less"/>
-    <tree path="/.prettierrc.js" title="Prettier配置" extension="js"/>
-    <tree path="/.stylelintrc.js" title="Stylelint配置" extension="json"/>
+    <tree path="/.prettierrc.cjs" title="Prettier配置" extension="js"/>
+    <tree path="/.stylelintrc.cjs" title="Stylelint配置" extension="json"/>
+    <tree path="/commitlint.config.cjs" title="CommitLint 配置" extension="js"/>
+    <tree path="/.eslintrc.cjs" title="ESLint 配置" extension="js"/>
+    <tree path="/components" title="组件文件夹"/>
 </trees>

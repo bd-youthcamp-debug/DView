@@ -1,6 +1,18 @@
 {
   "name": "d-view",
   "version": "1.0.0",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/d-view.umd.cjs",
+  "module": "./dist/d-view.js",
+  "exports": {
+    ".": {
+      "import": "./dist/d-view.js",
+      "require": "./dist/d-view.umd.cjs"
+    }
+  },
   "description": "DView",
   "scripts": {
     "precommit": "lint-staged",
