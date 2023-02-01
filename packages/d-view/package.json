@@ -3,20 +3,16 @@
   "version": "1.0.0",
   "type": "module",
   "files": [
-    "dist"
+    "dist",
+    "style"
   ],
   "main": "./dist/d-view.umd.cjs",
   "module": "./dist/d-view.js",
-  "exports": {
-    ".": {
-      "import": "./dist/d-view.js",
-      "require": "./dist/d-view.umd.cjs"
-    }
-  },
   "description": "DView",
   "scripts": {
     "precommit": "lint-staged",
-    "build": "vite build",
+    "build": "vite build && pnpm build:style",
+    "build:style": "lessc ./style/index.less ./style/index.css",
     "lint": "pnpm tsc && pnpm lint:eslint&& pnpm lint:style && pnpm lint:md ",
     "lint:eslint": "eslint . --ext .js,.jsx,.ts,.tsx,.vue",
     "lint:md": "remark . -f -q",

@@ -1,3 +1,4 @@
+// eslint-disable-next-line func-names
 const prefixManager = (function () {
   const prefix = Object.create({
     comp: 'D',
@@ -18,10 +19,10 @@ export const getClassPrefix = () => {
   return prefixManager('get', 'class');
 };
 // 设置组件前缀
-export const setComponentPrefix = (name: string) => {
-  prefixManager('set', 'comp', name);
+export const setComponentPrefix = (name: string | undefined) => {
+  prefixManager('set', 'comp', name ?? getComponentPrefix());
 };
 // 设置 className 前缀
-export const setClassPrefix = (name: string) => {
-  prefixManager('set', 'class', name);
+export const setClassPrefix = (name: string | undefined) => {
+  prefixManager('set', 'class', name ?? getClassPrefix());
 };
