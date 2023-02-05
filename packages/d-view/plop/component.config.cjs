@@ -37,6 +37,11 @@ module.exports = {
             templateFile: 'plop/templates/component/index.less.hbs',
             skip: actions.skip({isUseLess: false}, '跳过样式文件生成'),
         }, {
+            type: 'add',
+            path: `${componentStylePath}/{{componentName}}/component-var.less`,
+            templateFile: 'plop/templates/component/component-var.less.hbs',
+            skip: actions.skip({isUseLess: false}, '跳过样式文件生成'),
+        }, {
             type: 'modify',
             path: `${componentStylePath}/index.less`,
             pattern: /\/\/\s--\s这行不要编辑!\s\sAPPEND\sIMPORT\sCOMPONENT\sSTYLE\sHERE\s--\s\/\//,
