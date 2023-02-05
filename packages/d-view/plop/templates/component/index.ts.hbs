@@ -1,0 +1,13 @@
+import { App } from 'vue';
+import { getComponentPrefix } from '@/utils/global-config';
+import _{{kebabToPascal componentName}} from './{{componentName}}.vue';
+
+const {{kebabToPascal componentName}} = Object.assign(_{{kebabToPascal componentName}}, {
+  install: (app: App) => {
+    app.component(getComponentPrefix() + _{{kebabToPascal componentName}}.name, _{{kebabToPascal componentName}});
+  },
+});
+
+export type { {{kebabToPascal componentName}}Props } from './types';
+
+export default {{kebabToPascal componentName}};

@@ -11,6 +11,7 @@
   "description": "DView",
   "scripts": {
     "precommit": "lint-staged",
+    "plop": "plop",
     "build": "vite build && pnpm build:style",
     "build:style": "lessc ./style/index.less ./style/index.css",
     "lint": "pnpm tsc && pnpm lint:eslint&& pnpm lint:style && pnpm lint:md ",
